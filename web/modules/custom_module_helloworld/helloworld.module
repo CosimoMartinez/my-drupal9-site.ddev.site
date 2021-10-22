@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Helloworld module.
+ *
+ * Created by: Cosimo Martinez
+ * 
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Block\BlockPluginInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function helloworld_theme($existing, $type, $theme, $path) {
+  return [
+    'helloworld' => [
+      'variables' => ['today' => NULL],
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function helloworld_block_view_alter(array &$build, BlockPluginInterface $block) {
+
+}
